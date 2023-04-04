@@ -39,8 +39,11 @@ main{
     left: 50%;
     bottom: 3rem;
 
-    height: 15svh;
-    width: 15svh;
+    height: 15svw;
+    width: 15svw;
+
+    max-height: 15svh;
+    max-width: 15svh;
 
     margin: 0;
     padding: 0;
@@ -130,7 +133,7 @@ body[data-state="true"] > main{
     transform: translateY(-50%);
 }
 
-@media only screen and (max-width: 600px) {
+@media  (max-width: 1000px) {
     .item{
         width: 20rem;
     }
