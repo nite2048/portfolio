@@ -17,9 +17,6 @@ body, main{
     height: 100svh;
     width: 100svw;
 }
-
-
-
 main{
     background-image: url(https://images.unsplash.com/photo-1679240339099-1759c6576e96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=714&q=80);
     background-size: cover;
@@ -31,6 +28,9 @@ main{
 
     transition: transform 500ms ease-out;
 }
+
+
+
 
 #toggle{
 
@@ -54,15 +54,76 @@ main{
     transition-timing-function: ease;
 
     z-index: 3;
+
+    transform: translateX(-50%);
+
+}
+nav{
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    height: 50svh;
+    width: 100%;
+
+    z-index: 1;
 }
 
+#links{
+    height: 100%;
+    width: 100%;
+
+    position: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: clamp(1rem, 2vw, 2rem);
+
+    /*margin-top: clamp(2rem, 2vw, 3rem);*/
+    /*padding: 0 clamp(1rem, 2vw, 2rem);*/
+
+    transform:  scale(0.9);
+    transition: transform 500ms ease-out;
+}
+
+.item{
+    height: 24vh;
+    width: 28vw;
+
+    background-size: cover;
+}
+
+.item:nth-child(1){
+    background-image: url(https://images.unsplash.com/photo-1679341653239-3943bfe40a1a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80);
+}
+.item:nth-child(2){
+    background-image: url(https://images.unsplash.com/photo-1679504808271-237ad3ae0d7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=892&q=80);
+}
+.item:nth-child(3){
+    background-image: url(https://images.unsplash.com/photo-1679347882414-c52d1df0b6c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+}
+.item:nth-child(4){
+    background-image: url(https://images.unsplash.com/photo-1678889284769-b7dcbec1f082?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80);
+}
+.item:nth-child(5){
+    background-image: url(https://images.unsplash.com/photo-1678889284805-5c86fb1dba5a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80);
+}
+
+body[data-state="true"] > nav >#links{
+    transform: translateY(-25%); scale(1);
+}
+
+
 #toggle:hover{
-    transform: scale(1.04);
+    transform: translateX(-50%) scale(1.04);
 }
 
 #toggle:active{
     transition-duration: 50ms;
-    transform: scale(0.96);
+    transform: translateX(-50%) scale(0.96);
 }
 
 body[data-state="true"] > main{
