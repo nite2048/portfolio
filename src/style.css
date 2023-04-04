@@ -1,0 +1,67 @@
+:root{
+    --primary-color: black;
+    --secondary-color: white;
+
+    color: var(--secondary-color);
+
+    font-family: Calibri, serif;
+    font-size: 16px;
+}
+
+body, main{
+    background-color: var(--primary-color, black);
+
+    margin: 0;
+    padding: 0;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+
+
+main{
+    background-image: url(https://images.unsplash.com/photo-1679240339099-1759c6576e96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=714&q=80);
+    background-size: cover;
+
+    background-position: center 80%;
+    position: relative;
+
+    z-index: 2;
+
+    transition: transform 500ms ease-out;
+}
+
+#toggle{
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 3rem;
+
+    height: 5rem;
+    width: 5rem;
+
+    border-radius: 50%;
+    border: none;
+
+    background-color: aquamarine;
+
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+
+    z-index: 3;
+}
+
+#toggle:hover{
+    transform: scale(1.04);
+}
+
+#toggle:active{
+    transition-duration: 50ms;
+    transform: scale(0.96);
+}
+
+body[data-state="true"] > main{
+    transform: translateY(-50%);
+}
