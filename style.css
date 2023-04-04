@@ -14,8 +14,8 @@ body, main{
     margin: 0;
     padding: 0;
 
-    height: 100vh;
-    width: 100vw;
+    height: 100svh;
+    width: 100svw;
 }
 
 
@@ -34,13 +34,16 @@ main{
 
 #toggle{
 
-    position: absolute;
+    position: fixed;
 
     left: 50%;
     bottom: 3rem;
 
-    height: 5rem;
-    width: 5rem;
+    height: 80px;
+    width: 80px;
+
+    margin: 0;
+    padding: 0;
 
     border-radius: 50%;
     border: none;
