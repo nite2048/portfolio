@@ -39,8 +39,8 @@ main{
     left: 50%;
     bottom: 3rem;
 
-    height: 80px;
-    width: 80px;
+    height: 15svh;
+    width: 15svh;
 
     margin: 0;
     padding: 0;
@@ -128,4 +128,16 @@ body[data-state="true"] > nav >#links{
 
 body[data-state="true"] > main{
     transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 600px) {
+    .item{
+        width: 20rem;
+    }
+    .item:nth-child(4){
+        display: none;
+    }
+    .item:nth-child(5){
+        display: none;
+    }
 }
