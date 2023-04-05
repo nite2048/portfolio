@@ -9,7 +9,7 @@ const handleOnMove = e => {
     if(document.getElementById("image-track").dataset.mouse === "0") return;
 
     const mouseDelta = parseFloat(document.getElementById("image-track").dataset.mouse) - e.clientX,
-        maxDelta = window.innerWidth / 2;
+        maxDelta = window.innerWidth * 8;
 
     const percentage = (mouseDelta / maxDelta) * -100,
         nextPercentageUnconstrained = parseFloat(document.getElementById("image-track").dataset.percentage) + percentage,
