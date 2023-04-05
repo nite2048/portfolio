@@ -16,6 +16,8 @@ body, main{
 
     height: 100svh;
     width: 100svw;
+
+    overflow: hidden;
 }
 main{
     background-image: url(https://images.unsplash.com/photo-1679240339099-1759c6576e96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=714&q=80);
@@ -28,8 +30,6 @@ main{
 
     transition: transform 500ms ease-out;
 }
-
-
 
 
 #toggle{
@@ -84,9 +84,6 @@ nav{
     align-items: center;
 
     gap: clamp(1rem, 2vw, 2rem);
-
-    /*margin-top: clamp(2rem, 2vw, 3rem);*/
-    /*padding: 0 clamp(1rem, 2vw, 2rem);*/
 
     transform:  scale(0.9);
     transition: transform 500ms ease-out;
@@ -143,4 +140,22 @@ body[data-state="true"] > main{
     .item:nth-child(5){
         display: none;
     }
+}
+
+
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-30%, -50%);
+    user-select: none;
+}
+
+#image-track > .image {
+    width: 40vmin;
+    height: 46vmin;
+    object-fit: cover;
+    object-position: 100% center;
 }
