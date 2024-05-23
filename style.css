@@ -4,7 +4,7 @@
 
     color: var(--secondary-color);
 
-    font-family: Calibri, serif;
+    font-family: "Times new roman", serif;
     font-size: 16px;
 }
 
@@ -20,7 +20,7 @@ body, main{
     overflow: hidden;
 }
 main{
-    background-image: url(https://images.unsplash.com/photo-1679240339099-1759c6576e96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=714&q=80);
+    background-image: url(https://images.unsplash.com/photo-1519415943484-9fa1873496d4?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-size: cover;
 
     background-position: center 80%;
@@ -31,12 +31,37 @@ main{
     transition: transform 500ms ease-out;
 }
 
+h1{
+    font-size: 6rem;
+    color: black;
+    padding-left: 2rem;
+    padding-top: 3rem;
+    margin: 0;
+}
+
+#sub{
+    font-size: 3rem;
+    color: darkgreen;
+    padding-top: 0.5rem;
+    padding-left: 3rem;
+
+    margin: 0px;
+}
+
+p{
+    font-size: 1.05rem;
+    padding-top:18rem;
+    padding-right : 70%;
+    padding-left: 3rem;
+    color: gray;
+}
 
 #toggle{
 
     position: fixed;
+    font-family: "Times new roman", serif;
 
-    left: 50%;
+    left: 93%;
     bottom: 3rem;
 
     height: 15svw;
@@ -51,12 +76,16 @@ main{
     border-radius: 50%;
     border: none;
 
-    background-color: aquamarine;
+    background-color: white;
+    border: 0.1rem dashed gray;
 
     transition-duration: 300ms;
     transition-timing-function: ease;
 
     z-index: 3;
+    color:darkgreen;
+    
+    font-size:2rem;
 
     transform: translateX(-50%);
 

@@ -1,5 +1,4 @@
 const handleOnDown = e => document.getElementById("image-track").dataset.mouse = e.clientX;
-
 const handleOnUp = () => {
     document.getElementById("image-track").dataset.mouse = "0";
     document.getElementById("image-track").dataset.percentage = document.getElementById("image-track").dataset.percentage;
@@ -46,4 +45,9 @@ window.ontouchmove = e => handleOnMove(e.touches[0]);
 
 function toggle() {
     document.body.dataset.state = document.body.dataset.state === "true" ? "false" : "true";
+    if(document.body.dataset.state){
+        document.getElementById("toggle").innerHtml = "Back";
+    }else{
+        document.getElementById("toggle").innerHtml = "Shop";
+    }
 }
